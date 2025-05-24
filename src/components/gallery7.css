@@ -1,0 +1,50 @@
+.gallery7-gallery3 {
+  padding: 80px 24px;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+.gallery7-max-width {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.gallery7-section-title {
+  margin-bottom: 32px;
+}
+
+.gallery7-text1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+   color: #000000;
+}
+
+.gallery7-text2 {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.gallery7-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.gallery7-button {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 999px;
+  background-color: #c44105; /* or your theme color */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.gallery7-button:hover {
+  background-color: #a23604;
+}

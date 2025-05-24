@@ -1,0 +1,112 @@
+.contact3-container {
+  width: 100%;
+  padding: 80px 24px;
+  background: linear-gradient(to bottom right, #fff0f0, #ffe7d9); /* Full width background */
+  text-align: center;
+}
+
+.contact3-header {
+  margin-bottom: 40px;
+}
+
+.contact3-subtitle {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.contact3-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+   color: #000000;
+}
+
+.contact3-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-icon {
+  width: 40px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  font-weight: 700; /* ✅ Make Email bold */
+  margin-bottom: 4px;
+   color: #000000;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.contact3-form-container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+  text-align: left;
+}
+
+.contact3-form-title {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contact3-form input,
+.contact3-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  background: #fafafa;
+  transition: 0.3s ease;
+}
+
+.contact3-form input:focus,
+.contact3-form textarea:focus {
+  border-color: #e67300;
+  outline: none;
+  background: #fff;
+}
+
+.contact3-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact3-form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact3-form button:hover {
+  background: linear-gradient(to right, #ff6a49, #fd9a5a);
+}

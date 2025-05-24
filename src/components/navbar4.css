@@ -1,0 +1,114 @@
+/* Force white text */
+.navbar4-container,
+.navbar4-container * {
+  color: #ffffff !important;
+}
+
+/* ✅ LIGHT BACKGROUND */
+.navbar4-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #446688; /* 🌟 Light enough to contrast with white text */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+/* ✅ Wrapper */
+.navbar4-navbar-interactive {
+  width: 100%;
+  max-width: var(--dl-layout-size-maxwidth);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+}
+
+/* ✅ Logo */
+.navbar4-image1 {
+  height: 2.5rem;
+  filter: drop-shadow(0 0 2px #00bfff);
+}
+
+/* ✅ Menu Layout */
+.navbar4-desktop-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* ✅ Nav Link Container */
+.navbar4-links1 {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ✅ Links */
+.thq-link {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff !important;
+  padding: 0.25rem 0.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+}
+
+.thq-link:hover {
+  color: #00bfff !important;
+}
+
+.thq-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.thq-link:hover::after {
+  width: 100%;
+}
+
+/* ✅ Contact Button */
+.navbar4-contact-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: #00bfff;
+  color: #ffffff !important;
+  border-radius: 4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar4-contact-link:hover {
+  background-color: #0094cc;
+  color: #ffffff !important;
+}
+
+/* ✅ Mobile */
+@media (max-width: 767px) {
+  .navbar4-desktop-menu {
+    display: none;
+  }
+
+  .navbar4-navbar-interactive {
+    padding: 12px 16px;
+  }
+
+  .navbar4-contact-link {
+    display: none;
+  }
+}
