@@ -1,36 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './navbar4.css';
 
 const Navbar4 = (props) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className="navbar4-container">
       <div className="navbar4-navbar-interactive">
-        <img
-          alt={props.logoAlt}
-          src={props.logoSrc}
-          className="navbar4-image1"
-        />
-        <div className="navbar4-desktop-menu">
-          <nav className="navbar4-links1">
-            <a href={props.link1Url} className="thq-link thq-body-small">
+        <div className="navbar4-logo-brand">
+          <img
+            alt={props.logoAlt}
+            src={props.logoSrc}
+            className="navbar4-image1"
+          />
+          <span className="navbar4-brandname-mobile">AgentPi</span>
+        </div>
+
+        <nav className="navbar4-desktop-menu">
+          <div className="navbar4-links1">
+            <a href={props.link1Url} className="navbar-link">
               {props.link1}
             </a>
-            <a href={props.link2Url} className="thq-link thq-body-small">
+            <a href={props.link2Url} className="navbar-link">
               {props.link2}
             </a>
-            <a href={props.link3Url} className="thq-link thq-body-small">
+            <a href={props.link3Url} className="navbar-link">
               {props.link3}
             </a>
-            <a href={props.link4Url} className="thq-link thq-body-small">
+            <a href={props.link4Url} className="navbar-link">
               {props.link4}
             </a>
-          </nav>
-          <a href={props.link5Url} className="thq-link thq-body-small navbar4-contact-link">
+          </div>
+          <a href={props.link5Url} className="navbar4-contact-link">
             {props.link5}
           </a>
+        </nav>
+
+        <div className="navbar4-hamburger" onClick={toggleMobileMenu}>
+          ☰
         </div>
       </div>
+
+      {isMobileMenuOpen && (
+        <nav className="navbar4-mobile-menu">
+          <a href={props.link1Url} onClick={toggleMobileMenu}>
+            {props.link1}
+          </a>
+          <a href={props.link2Url} onClick={toggleMobileMenu}>
+            {props.link2}
+          </a>
+          <a href={props.link3Url} onClick={toggleMobileMenu}>
+            {props.link3}
+          </a>
+          <a href={props.link4Url} onClick={toggleMobileMenu}>
+            {props.link4}
+          </a>
+          <a href={props.link5Url} onClick={toggleMobileMenu}>
+            {props.link5}
+          </a>
+        </nav>
+      )}
     </header>
   );
 };
@@ -38,11 +72,11 @@ const Navbar4 = (props) => {
 Navbar4.defaultProps = {
   logoSrc: '/logo.png',
   logoAlt: 'Company Logo',
-  link1: <span>Home</span>,
-  link2: <span>Services</span>,
-  link3: <span>Career</span>,
-  link4: <span>About</span>,
-  link5: <span>Contact</span>,
+  link1: 'Home',
+  link2: 'Services',
+  link3: 'Career',
+  link4: 'About',
+  link5: 'Contact',
   link1Url: '#Hero9',
   link2Url: '#Features22',
   link3Url: '#Gallery7',

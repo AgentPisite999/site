@@ -1,57 +1,33 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import './gallery7.css'
+import React from 'react';
+import './gallery7.css';
 
-const Gallery7 = (props) => {
+const Gallery7 = ({ gallery7Id = 'Career' }) => {
   return (
-    <div
-      id={props.gallery7Id} // This is where the scroll will land
-      className="gallery7-gallery3 thq-section-padding"
-    >
-      <div className="gallery7-max-width">
-        <div className="gallery7-section-title">
-          <h2 className="gallery7-text1 thq-heading-2">
-            {props.heading1 ?? (
-              <Fragment>
-                <span className="gallery7-text6">About AgentPi</span>
-              </Fragment>
-            )}
-          </h2>
-          <span className="gallery7-text2 thq-body-large">
-            {props.content1 ?? (
-              <Fragment>
-                <span>
-                  At AgentPi, we are redefining the future of technology with
-                  intelligent, adaptive, and forward-thinking IT solutions. Our
-                  mission is to engineer advanced digital infrastructures that
-                  anticipate growth. From AI to automation, AgentPi builds smart
-                  ecosystems that shape the future.
-                </span>
-              </Fragment>
-            )}
-          </span>
-        </div>
+    <div id={gallery7Id} className="gallery7-gallery3">
+      <div className="career-card-wrapper"> {/* Card wrapper added here */}
+        <div className="gallery7-max-width">
+          <h2 className="gallery7-title">Career</h2>
+          <p className="gallery7-description">
+            At AgentPi, we are redefining the future of technology with intelligent, adaptive,
+            and forward-thinking IT solutions. Our mission is to engineer advanced digital
+            infrastructures that anticipate growth. From AI to automation, AgentPi builds smart
+            ecosystems that shape the future.
+          </p>
 
-        {/* Optional buttons */}
-        <div className="gallery7-button-group">
-          <button className="gallery7-button thq-button-filled">For Freshers</button>
-          <button className="gallery7-button thq-button-filled">For Experienced Professionals</button>
+          <div className="career-row">
+            <div className="career-box">
+              <img src="/icons/fresh.png" alt="Freshers" className="career-image" />
+              <button className="gallery7-button">For Freshers</button>
+            </div>
+            <div className="career-box">
+              <img src="/icons/pro.png" alt="Experienced" className="career-image" />
+              <button className="gallery7-button">For Experienced Professionals</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-Gallery7.defaultProps = {
-  gallery7Id: 'Career', // 💡 This MUST match the navbar link like href="#Career"
-  content1: undefined,
-  heading1: undefined,
-}
-
-Gallery7.propTypes = {
-  gallery7Id: PropTypes.string,
-  content1: PropTypes.element,
-  heading1: PropTypes.element,
-}
-
-export default Gallery7
+export default Gallery7;

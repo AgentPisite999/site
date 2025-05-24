@@ -31,32 +31,34 @@ const teamMembers = [
 const Team14 = () => {
   return (
     <section className="team14-wrapper" id="Team14">
-      <div className="team14-bg">
-        <h2 className="team14-heading">About AgentPi</h2>
-        <p className="team14-intro">
-          At AgentPi, we are redefining the future of technology with intelligent, adaptive, and forward-thinking IT solutions.
-          Our mission is to engineer advanced digital infrastructures that anticipate growth. From AI to automation, AgentPi builds smart ecosystems that shape the future.
-        </p>
+      <div className="team14-card-wrapper">
+        <div className="team14-bg">
+          <h2 className="team14-heading">About AgentPi</h2>
+          <p className="team14-intro">
+            At AgentPi, we are redefining the future of technology with intelligent, adaptive, and forward-thinking IT solutions.
+            Our mission is to engineer advanced digital infrastructures that anticipate growth. From AI to automation, AgentPi builds smart ecosystems that shape the future.
+          </p>
 
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          loop={true}
-          pagination={{ clickable: true }}
-          navigation={true}
-          className="team14-swiper"
-        >
-          {teamMembers.map((member, index) => (
-            <SwiperSlide key={index}>
-              <div className="team14-card">
-                <img src={member.image} alt={member.name} className="team14-img" />
-                <h3 className="team14-name">{member.name}</h3>
-                <p className="team14-title">{member.title}</p>
-                <blockquote className="team14-quote">"{member.quote}"</blockquote>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation]}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            loop={true}
+            pagination={{ clickable: true }}
+            navigation={true}
+            className="team14-swiper"
+          >
+            {teamMembers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <div className="team14-card">
+                  <img src={member.image} alt={member.name} className="team14-img" />
+                  <h3 className="team14-name">{member.name}</h3>
+                  <p className="team14-title">{member.title}</p>
+                  <blockquote className="team14-quote">"{member.quote}"</blockquote>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
