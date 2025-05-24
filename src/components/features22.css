@@ -81,35 +81,38 @@
   padding: 0 12px;
   line-height: 1.4;
 }
-
-/* === Responsive: Keep 3x2 on Mobile === */
 @media (max-width: 768px) {
-  .features22-text-title {
-    font-size: 32px;
-  }
-
-  .features22-text11 {
-    font-size: 16px;
-    padding: 0 16px;
-  }
-
   .features22-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px 20px;
+    gap: 20px 10px;
+    padding: 0 10px;
+  }
+
+  .features22-wrapper {
+    gap: 10px;
   }
 
   .features22-icon-above {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 
   .features22-card {
-    width: 180px;
-    height: 60px;
-    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    font-size: 13px;
   }
 
   .features22-solution-text {
+    font-size: 12px;
+  }
+
+  .features22-text-title {
+    font-size: 28px;
+  }
+
+  .features22-text11 {
     font-size: 14px;
+    padding: 0 12px;
   }
 }
