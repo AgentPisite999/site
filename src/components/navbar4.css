@@ -1,0 +1,144 @@
+/* Navbar Container */
+.navbar4-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1f1f28;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Wrapper */
+.navbar4-navbar-interactive {
+  width: 100%;
+  max-width: var(--dl-layout-size-maxwidth);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+}
+
+/* Logo & Brand */
+.navbar4-logo-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar4-image1 {
+  height: 2.5rem;
+  filter: drop-shadow(0 0 2px #00bfff);
+}
+
+.navbar4-brandname-mobile {
+  display: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff !important;
+}
+
+/* Desktop menu */
+.navbar4-desktop-menu {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.navbar4-links1 {
+  display: flex !important;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Navbar links explicitly white */
+.navbar4-links1 .navbar-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar4-links1 .navbar-link:hover {
+  color: #00bfff !important;
+}
+
+/* Contact button */
+.navbar4-contact-link {
+  padding: 0.5rem 1rem;
+  border: 1px solid #00bfff;
+  border-radius: 4px;
+  color: #ffffff !important;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.navbar4-contact-link:hover {
+  background-color: #00bfff;
+  color: #1f1f28 !important;
+}
+
+/* Hamburger Menu */
+.navbar4-hamburger {
+  display: none;
+  color: #ffffff !important;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 767px) {
+  .navbar4-desktop-menu {
+    display: none !important;
+  }
+
+  .navbar4-hamburger {
+    display: block !important;
+  }
+
+  .navbar4-brandname-mobile {
+    display: inline-block !important;
+  }
+
+  .navbar4-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f28;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar4-mobile-menu a {
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+
+  .navbar4-mobile-menu a:hover {
+    background-color: #2a2a3b;
+  }
+
+  .navbar4-contact-link {
+    display: none !important;
+  }
+}
+
+/* Final global override explicitly white */
+header.navbar4-container a,
+header.navbar4-container div,
+header.navbar4-container span,
+header.navbar4-container nav {
+  color: #ffffff !important;
+}
+
+header.navbar4-container a:hover {
+  color: #00bfff !important;
+}

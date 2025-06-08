@@ -1,0 +1,118 @@
+/* === Section: Full Height Layout === */
+.features22-layout349 {
+  min-height: 100vh;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #e6f0fa 20%, #f9f0f9 80%);
+  width: 100%;
+}
+
+/* === Title + Description === */
+.features22-container1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.features22-text-title {
+  font-size: 46px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.features22-text11 {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* === 3x2 Grid Layout === */
+.features22-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+/* === Stack Icon + Card === */
+.features22-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* === Large Icon === */
+.features22-icon-above {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* === Card Box === */
+.features22-card {
+  width: 220px;
+  height: 70px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.features22-card:hover {
+  transform: translateY(-6px);
+  background-color: #f4f4f4;
+}
+
+.features22-solution-text {
+  color: #000;
+  padding: 0 12px;
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .features22-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px;
+    padding: 0 10px;
+  }
+
+  .features22-wrapper {
+    gap: 10px;
+  }
+
+  .features22-icon-above {
+    width: 70px;
+    height: 70px;
+  }
+
+  .features22-card {
+    width: 100px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .features22-solution-text {
+    font-size: 12px;
+  }
+
+  .features22-text-title {
+    font-size: 28px;
+  }
+
+  .features22-text11 {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
